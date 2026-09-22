@@ -1,0 +1,82 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.6)
+
+2026-09-16T16:45:12.954+08:00  INFO 43072 --- [           main] com.expiry.ExpiryFoodApplication         : Starting ExpiryFoodApplication v1.0.0 using Java 17.0.12 with PID 43072 (D:\tool\IDEA\linqi\GoodsManage\backend\target\expiry-food-backend-1.0.0.jar started by 联想 in D:\tool\IDEA\linqi\GoodsManage\backend)
+2026-09-16T16:45:12.961+08:00  INFO 43072 --- [           main] com.expiry.ExpiryFoodApplication         : No active profile set, falling back to 1 default profile: "default"
+2026-09-16T16:45:14.350+08:00  INFO 43072 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-16T16:45:14.370+08:00  INFO 43072 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-16T16:45:14.370+08:00  INFO 43072 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-09-16T16:45:14.404+08:00  INFO 43072 --- [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1366 ms
+Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
+Get /192.168.206.1 network interface 
+Get network interface info: name:eth5 (VMware Virtual Ethernet Adapter for VMnet1)
+Initialization Sequence datacenterId:4 workerId:24
+ _ _   |_  _ _|_. ___ _ |    _ 
+| | |\/|_)(_| | |_\  |_)||_|_\ 
+     /               |         
+                        3.5.16 
+2026-09-16T16:45:17.337+08:00  INFO 43072 --- [           main] m.e.s.MybatisPlusApplicationContextAware : Register ApplicationContext instances org.springframework.boot.web.server.servlet.context.AnnotationConfigServletWebServerApplicationContext@5c10f1c3
+2026-09-16T16:45:17.611+08:00  INFO 43072 --- [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-16T16:45:17.651+08:00  INFO 43072 --- [           main] com.expiry.ExpiryFoodApplication         : Started ExpiryFoodApplication in 5.245 seconds (process running for 5.797)
+2026-09-16T16:45:35.698+08:00  INFO 43072 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-16T16:45:35.698+08:00  INFO 43072 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-16T16:45:35.699+08:00  INFO 43072 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c2ea8bf] was not registered for synchronization because synchronization is not active
+2026-09-16T16:45:35.859+08:00  INFO 43072 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-16T16:45:36.091+08:00  INFO 43072 --- [nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3794849f
+2026-09-16T16:45:36.095+08:00  INFO 43072 --- [nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@401911708 wrapping com.mysql.cj.jdbc.ConnectionImpl@3794849f] will not be managed by Spring
+==>  Preparing: SELECT id,title,image_url,link_url,sort,status,create_time,update_time FROM banner WHERE (status = ?) ORDER BY sort ASC
+==> Parameters: 1(Integer)
+<==    Columns: id, title, image_url, link_url, sort, status, create_time, update_time
+<==        Row: 4, 1232, /uploads/2026/05/15/96efcb0efdac491b985dcfb4210474ac.jpg, , 0, 1, 2026-05-15 15:32:24, 2026-05-15 15:32:24
+<==        Row: 1, 临期特惠 低至1折, https://picsum.photos/1440/460?random=1, /products?expiryStatus=1, 1, 1, 2026-04-24 16:25:18, 2026-04-24 16:25:18
+<==        Row: 2, 新品上架 品质严选, https://picsum.photos/1440/460?random=2, /products, 2, 1, 2026-04-24 16:25:18, 2026-04-24 16:25:18
+<==        Row: 3, 热销排行 人气好货, https://picsum.photos/1440/460?random=3, /products?sortField=sales&sortOrder=desc, 3, 1, 2026-04-24 16:25:18, 2026-04-24 16:25:18
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c2ea8bf]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@469f4936] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1648124560 wrapping com.mysql.cj.jdbc.ConnectionImpl@3794849f] will not be managed by Spring
+==>  Preparing: SELECT id,title,image_url,link_url,sort,status,create_time,update_time FROM banner WHERE (status = ?) ORDER BY sort ASC
+==> Parameters: 1(Integer)
+<==    Columns: id, title, image_url, link_url, sort, status, create_time, update_time
+<==        Row: 4, 1232, /uploads/2026/05/15/96efcb0efdac491b985dcfb4210474ac.jpg, , 0, 1, 2026-05-15 15:32:24, 2026-05-15 15:32:24
+<==        Row: 1, 临期特惠 低至1折, https://picsum.photos/1440/460?random=1, /products?expiryStatus=1, 1, 1, 2026-04-24 16:25:18, 2026-04-24 16:25:18
+<==        Row: 2, 新品上架 品质严选, https://picsum.photos/1440/460?random=2, /products, 2, 1, 2026-04-24 16:25:18, 2026-04-24 16:25:18
+<==        Row: 3, 热销排行 人气好货, https://picsum.photos/1440/460?random=3, /products?sortField=sales&sortOrder=desc, 3, 1, 2026-04-24 16:25:18, 2026-04-24 16:25:18
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@469f4936]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1255b1fa] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1245944332 wrapping com.mysql.cj.jdbc.ConnectionImpl@3794849f] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM user WHERE (username = ?)
+==> Parameters: _selftest_tmp(String)
+<==    Columns: total
+<==        Row: 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1255b1fa]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b3c243a] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1682097544 wrapping com.mysql.cj.jdbc.ConnectionImpl@3794849f] will not be managed by Spring
+==>  Preparing: INSERT INTO user ( username, password, nickname, phone, status, create_time, update_time ) VALUES ( ?, ?, ?, ?, ?, ?, ? )
+==> Parameters: _selftest_tmp(String), e10adc3949ba59abbe56e057f20f883e(String), t(String), 13800000009(String), 1(Integer), 2026-09-16T16:47:06.744349100(LocalDateTime), 2026-09-16T16:47:06.746349700(LocalDateTime)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5b3c243a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55917385] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1114499878 wrapping com.mysql.cj.jdbc.ConnectionImpl@3794849f] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,nickname,phone,email,avatar,status,create_time,update_time FROM user WHERE (username = ?)
+==> Parameters: _selftest_tmp(String)
+<==    Columns: id, username, password, nickname, phone, email, avatar, status, create_time, update_time
+<==        Row: 65, _selftest_tmp, e10adc3949ba59abbe56e057f20f883e, t, 13800000009, null, null, 1, 2026-09-16 16:47:07, 2026-09-16 16:47:07
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@55917385]

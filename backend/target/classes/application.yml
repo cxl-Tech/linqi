@@ -1,0 +1,41 @@
+server:
+  port: 8081
+
+spring:
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: JDBC:mysql://localhost:3306/expiry_food_db?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root
+    password: 041218
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 20MB
+  Jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# JWT 配置
+jwt:
+  secret: expiry-food-platform-jwt-secret-key-2024
+  expiration: 86400000
+
+# 文件上传配置
+upload:
+  path: ./uploads/
+  url-prefix: /uploads/

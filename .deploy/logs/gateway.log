@@ -1,0 +1,4 @@
+网关已启动: http://127.0.0.1:9000
+  商城     /            -> D:\tool\IDEA\linqi\GoodsManage\frontend-consumer\dist
+  管理后台 /admin/      -> D:\tool\IDEA\linqi\GoodsManage\frontend-admin\dist
+  API      /api,/uploads,/ws -> http://127.0.0.1:8080

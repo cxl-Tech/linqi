@@ -1,0 +1,151 @@
+/* ========================================
+   临期食品管理后台 — 全局样式
+   色系与前台暖棕色系呼应
+   ======================================== */
+
+:root {
+  --admin-primary: #C8956C;
+  --admin-primary-dark: #8B5E3C;
+  --admin-primary-light: #E8D5C4;
+  --admin-primary-bg: #FDF6F0;
+  --admin-accent: #D4380D;
+  --admin-gold: #B8860B;
+
+  --admin-sidebar-bg: #2C2017;
+  --admin-sidebar-hover: #3D2B1F;
+  --admin-sidebar-active: rgba(200, 149, 108, 0.15);
+  --admin-sidebar-text: rgba(255,255,255,0.65);
+  --admin-sidebar-text-active: #C8956C;
+
+  --admin-bg-page: #FAF7F4;
+  --admin-bg-white: #FFFFFF;
+  --admin-bg-section: #F5F0EB;
+
+  --admin-text-primary: #1A1A1A;
+  --admin-text-regular: #4A4A4A;
+  --admin-text-secondary: #8C8C8C;
+
+  --admin-border-light: #F0E8E0;
+  --admin-border-base: #E0D5CC;
+
+  --admin-shadow-sm: 0 1px 4px rgba(139, 94, 60, 0.06);
+  --admin-shadow-md: 0 4px 12px rgba(139, 94, 60, 0.08);
+  --admin-shadow-hover: 0 6px 20px rgba(139, 94, 60, 0.12);
+
+  --admin-radius: 8px;
+  --admin-radius-lg: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--admin-text-primary);
+}
+
+/* ===== Element Plus 主题覆盖 ===== */
+.el-button--primary {
+  --el-button-bg-color: var(--admin-primary) !important;
+  --el-button-border-color: var(--admin-primary) !important;
+  --el-button-hover-bg-color: var(--admin-primary-dark) !important;
+  --el-button-hover-border-color: var(--admin-primary-dark) !important;
+}
+
+.el-tabs__active-bar { background-color: var(--admin-primary) !important; }
+.el-tabs__item.is-active { color: var(--admin-primary-dark) !important; }
+.el-tabs__item:hover { color: var(--admin-primary) !important; }
+
+.el-pagination.is-background .el-pager li.is-active {
+  background-color: var(--admin-primary) !important;
+}
+
+.el-menu-item.is-active {
+  color: var(--admin-sidebar-text-active) !important;
+}
+
+.el-switch.is-checked .el-switch__core {
+  background-color: var(--admin-primary) !important;
+  border-color: var(--admin-primary) !important;
+}
+
+/* Card 统一 */
+.el-card {
+  border-radius: var(--admin-radius) !important;
+  border: 1px solid var(--admin-border-light) !important;
+  box-shadow: var(--admin-shadow-sm) !important;
+}
+.el-card__header {
+  border-bottom: 1px solid var(--admin-border-light) !important;
+  padding: 14px 20px !important;
+  font-weight: 600;
+  color: var(--admin-text-primary);
+}
+
+/* Dialog */
+.el-dialog { border-radius: var(--admin-radius-lg) !important; }
+.el-dialog__header { border-bottom: 1px solid var(--admin-border-light); padding-bottom: 14px !important; }
+
+/* Table */
+.el-table { width: 100% !important; }
+.el-table th.el-table__cell {
+  background-color: var(--admin-bg-section) !important;
+  color: var(--admin-text-primary) !important;
+  font-weight: 600 !important;
+}
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+  background-color: #FDFAF7 !important;
+}
+
+/* ===== 页面标题 ===== */
+.page-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--admin-text-primary);
+  margin-bottom: 20px;
+  padding-left: 14px;
+  position: relative;
+}
+.page-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 22px;
+  border-radius: 2px;
+  background: var(--admin-primary);
+}
+
+/* ===== Stat Card 图标 ===== */
+.stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.stat-icon.blue { background: #EBF3FE; color: #3B82F6; }
+.stat-icon.green { background: #ECFDF5; color: #10B981; }
+.stat-icon.orange { background: #FFF7ED; color: #F59E0B; }
+.stat-icon.red { background: #FEF2F2; color: #EF4444; }
+.stat-icon.purple { background: #F5F3FF; color: #8B5CF6; }
+.stat-icon.brown { background: var(--admin-primary-bg); color: var(--admin-primary-dark); }
+
+/* ===== 列表筛选栏 ===== */
+.list-filter-bar {
+  display: flex !important; flex-direction: row !important; align-items: center; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 16px; padding: 12px 16px;
+  background: var(--admin-bg-section); border-radius: var(--admin-radius);
+}
+.list-filter-bar > * { flex-shrink: 0; }
+.list-filter-bar .el-input { width: 240px; max-width: 240px; }
+.list-filter-bar .el-select { width: 150px !important; max-width: 180px; }
+.list-filter-bar .el-select .el-input { width: 100%; max-width: 100%; }
